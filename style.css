@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f5f5f7;
+    color: #1d1d1f;
+}
+
+/* NAVBAR */
+.navbar {
+    background: white;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #1d1d1f;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    height: 90vh;
+    background: radial-gradient(circle at top, #1c1c1c, #000);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 90px;
+
+    overflow: hidden;
+}
+
+/* TEKS UTAMA */
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.85;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+/* DETAIL KATA-KATA */
+.hero .detail {
+    font-size: 14px;
+    max-width: 420px;
+    line-height: 1.6;
+    opacity: 0.75;
+    z-index: 2;
+}
+
+/* GAMBAR IPHONE TRANSPARAN */
+.hero::after {
+    content: "";
+    position: absolute;
+    right: 5%;
+    bottom: -15%;
+
+    width: 500px;
+    height: 800px;
+
+    background: url("img/iphone-bg.png") no-repeat center;
+    background-size: contain;
+
+    opacity: 0.1; /* 🔥 GANTI 0.05 JIKA MAU 5% */
+    z-index: 1;
+}
+
+
+
+/* PRODUK */
+.produk {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.produk-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.produk-card img {
+    width: 100%;
+}
+
+.harga {
+    font-weight: bold;
+}
+
+.produk-card button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: #0071e3;
+    color: white;
+    border: none;
+    border-radius: 25px;
+}
+
+/* CART */
+.cart {
+    padding: 60px;
+}
+
+.cart-box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.total-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* CHECKOUT */
+.checkout {
+    padding: 80px 60px;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 40px;
+}
+
+.checkout-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.checkout-card input,
+.checkout-card textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+}
+
+.payment {
+    display: block;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.btn-bayar {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    color: white;
+    border-radius: 30px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+}
+ .struk {
+    padding: 60px;
+    background: #f4f4f4;
+}
+
+.struk-box {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.struk-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.struk-box ul {
+    padding-left: 20px;
+}
+
+.struk-box .total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.struk-box .thanks {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+}

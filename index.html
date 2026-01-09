@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>iPhone Store | Sri Wahyuni</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">iPhone Store</div>
+    <nav>
+        <a href="#produk">iPhone</a>
+        <a href="#cart">Keranjang</a>
+        <a href="#checkout">Checkout</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>iPhone Experience</h1>
+    <p>Premium Design. Premium Performance.</p>
+    <div class="detail">
+        Nikmati iPhone dengan teknologi terbaru, kamera profesional,
+        dan performa tinggi yang mendukung aktivitas harian Anda.
+    </div>
+</section>
+
+<!-- PRODUK -->
+<section id="produk" class="produk">
+    <h2>Pilih iPhone Anda</h2>
+
+    <div class="produk-grid">
+        <div class="produk-card">
+            <img src="img/iphone15.jpg" alt="iPhone 15">
+            <h3>iPhone 15</h3>
+            <p class="harga">Rp 15.000.000</p>
+            <button onclick="tambahKeranjang('iPhone 15',15000000)">
+                Tambah ke Keranjang
+            </button>
+        </div>
+
+        <div class="produk-card">
+            <img src="img/iphone14.jpg" alt="iPhone 14">
+            <h3>iPhone 14</h3>
+            <p class="harga">Rp 13.000.000</p>
+            <button onclick="tambahKeranjang('iPhone 14',13000000)">
+                Tambah ke Keranjang
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- KERANJANG -->
+<section id="cart" class="cart">
+    <h2>Ringkasan Pesanan</h2>
+
+    <div class="cart-box">
+        <ul id="daftarKeranjang"></ul>
+        <div class="total-box">
+            <span>Total Pembayaran</span>
+            <strong>Rp <span id="totalHarga">0</span></strong>
+        </div>
+    </div>
+</section>
+
+<!-- CHECKOUT -->
+<section id="checkout" class="checkout">
+    <h2>Checkout</h2>
+
+    <div class="checkout-grid">
+
+        <!-- DATA PEMBELI -->
+        <div class="checkout-card">
+            <h3>Informasi Pembeli</h3>
+            <input type="text" id="nama" placeholder="Nama Lengkap">
+            <input type="text" id="wa" placeholder="No. WhatsApp">
+            <textarea id="alamat" placeholder="Alamat Lengkap"></textarea>
+        </div>
+
+        <!-- PEMBAYARAN -->
+        <div class="checkout-card">
+            <h3>Metode Pembayaran</h3>
+
+            <label class="payment">
+                <input type="radio" name="bayar" checked>
+                Transfer Bank
+            </label>
+
+            <label class="payment">
+                <input type="radio" name="bayar">
+                E-Wallet (Dana / OVO / GoPay)
+            </label>
+
+            <label class="payment">
+                <input type="radio" name="bayar">
+                COD (Bayar di Tempat)
+            </label>
+
+            <button class="btn-bayar" onclick="checkout()">
+                Konfirmasi & Bayar
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<!-- STRUK -->
+<section id="struk" class="struk" style="display:none">
+    <div class="struk-box">
+        <h2>🧾 STRUK PEMBELIAN</h2>
+
+        <p><strong>Nama:</strong> <span id="strukNama"></span></p>
+        <p><strong>WhatsApp:</strong> <span id="strukWa"></span></p>
+        <p><strong>Alamat:</strong> <span id="strukAlamat"></span></p>
+
+        <hr>
+
+        <h4>Detail Pesanan</h4>
+        <ul id="strukBarang"></ul>
+
+        <p class="total">
+            Total Bayar: Rp <span id="strukTotal"></span>
+        </p>
+
+        <p class="thanks">
+            Terima kasih telah berbelanja di iPhone Store
+        </p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 iPhone Store | Sri Wahyuni</p>
+    <p id="tanggal"></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
